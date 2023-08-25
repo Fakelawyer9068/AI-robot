@@ -1,0 +1,107 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #1a1a1a; /* Dark background color */
+    color: white; /* Light text color */
+    font-family: Arial, sans-serif;
+}
+
+.robot {
+    width: 150px;
+    height: 220px; /* Increased height for a more balanced look */
+    background-color: #333; /* Darker robot body color */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for a lifted appearance */
+}
+
+.head {
+    width: 100px; /* Slightly larger head */
+    height: 100px; /* Slightly larger head */
+    background-color: #444; /* Darker head background color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.eye {
+    width: 40px; /* Larger eyes */
+    height: 40px; /* Larger eyes */
+    background-color: #fff; /* White eye color */
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Eye shadow */
+}
+
+.left-eye {
+    margin-right: 15px; /* More spacing between eyes */
+}
+
+.body {
+    width: 120px; /* Wider body */
+    height: 100px; /* Taller body */
+    background-color: #222; /* Darker body background color */
+    border-radius: 20px; /* Rounder body */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Body shadow */
+}
+
+/* Additional styles for interaction */
+.interaction {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#user-input {
+    padding: 5px;
+    margin-right: 5px; /* Add some space between input and button */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #444; /* Darker input background color */
+    color: white; /* Light text color */
+}
+
+#submit-btn {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.response-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Add some space between input and response */
+}
+
+.user-message,
+.robot-response {
+    margin: 5px;
+    padding: 5px;
+    background-color: #444; /* Darker response background color */
+    border-radius: 5px;
+}
+
+.thinking .loading {
+    animation: loading-animation 1s infinite;
+    font-size: 18px;
+}
+
+@keyframes loading-animation {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+}
